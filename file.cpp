@@ -6,6 +6,7 @@ file::file(string _name)
     ifstream fi(_name, ifstream::binary);
     if (fi.is_open())
     {
+        found = true;
         // get size of the file
         fi.seekg(0, ifstream::end);
         this->sizeOfFile = fi.tellg();
@@ -23,6 +24,7 @@ file::file(string _name)
     }
     else
     {
+        found = false;
         cout << "ERROR : Couldn't find your file";
     }
     fi.close();

@@ -23,6 +23,7 @@ private:
     vector<subfile *> subFileName;
 
 public:
+    bool found;
     file() = default;
     ~file() = default;
     file(string _name);

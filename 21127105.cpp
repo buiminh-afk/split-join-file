@@ -7,7 +7,10 @@ int main()
     cout << "Enter name of the file you want to split : ";
     getline(cin, inputFile);
     file test(inputFile);
-    test.split();
-    test.join();
+    if (test.found)
+    {
+        test.split();
+        test.join();
+    }
     return 0;
 }
